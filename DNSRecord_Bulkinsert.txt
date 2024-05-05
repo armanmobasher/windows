@@ -1,0 +1,5 @@
+*DNS Bulk insert*
+
+Import-Csv [csv file path] | foreach{Add-DnsServerResourceRecordA -Name $_.name -ZoneName [zone name] -IPv4Address $_.ip -ComputerName [dns server hostname] }
+example:
+Import-Csv .\hostdvsdns.csv | foreach{Add-DnsServerResourceRecordA -Name $_.name -ZoneName bmi.net -IPv4Address $_.ip -ComputerName ns2-fw }
