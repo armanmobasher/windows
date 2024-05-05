@@ -1,0 +1,12 @@
+Query for nslookup
+$ipListPath = "E:\List\ip.txt"
+$ipAddresses = Get-Content $ipListPath
+foreach ($ip in $ipAddresses) {
+try {
+$hostEntry = [System.Net.Dns]::GetHostByAddress($ip)
+$hostname = $hostEntry.HostName
+Write-Host "IP: $ip is $hostname"
+} catch {
+Write-Host "IP: $ip could not be resolved."
+}
+}
