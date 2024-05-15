@@ -1,0 +1,13 @@
+netsh interface
+
+netsh interface portproxy add v4tov4 listenport="any unknown port" listenaddress="my ip" connectport="port ned to use your system" connectaddress="server ip"
+
+Example
+
+netsh interface portproxy add v4tov4 listenport=45401 listenaddress=192.168.43.74 connectport=3389 connectaddress=192.168.163.114
+
+
+
+netsh interface portproxy reset
+
+netsh interface portproxy show all
