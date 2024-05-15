@@ -1,0 +1,10 @@
+Connection Test
+
+CMD
+telnet 192.168.20.35 1433
+
+Powershell:
+Test-NetConnection Destination IP -port 1433
+
+Example
+Test-NetConnection 192.168.1.35 -port 1433
