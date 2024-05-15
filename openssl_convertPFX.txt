@@ -1,0 +1,16 @@
+Openssl - Convert PFX to Crt and key - Remove pass
+
+
+1-convert certificate (pem or crt) and remove pass
+openssl pkcs12 -in webinar.pfx -clcerts -nokeys -out webinar.crt
+openssl pkcs12 -in webinar.pfx -clcerts -nokeys -out webinar.pem
+
+2-Convert key
+openssl pkcs12 -in webinar.pfx -nocerts -out webinar.private.key
+
+3-remove pass from key
+openssl rsa -in webinar.private.key -out webinar.key
+
+
+
+https://blog.abatishchev.dev/2015/07/22/how-to-extract-private-key-from-pfx-and-remove-passphrase-using-openssl/
