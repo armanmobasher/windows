@@ -1,0 +1,14 @@
+PS-Remote
+Enter-PSSession -ComputerName hostname -Credential (Get-Credential -UserName domain\user -Message "gimme the password")
+
+
+add  a Trust host
+Set-Item wsman:\localhost\Client\TrustedHosts -value 192.168.160.64
+
+More than 2 host
+Set-Item wsman:\localhost\Client\TrustedHosts -value '192.168.160.64,192.168.160.95'
+
+All Hosts Trust
+Set-Item wsman:\localhost\Client\TrustedHosts -value '*'
+
+https://rcmtech.wordpress.com/2017/06/09/remote-powershell-to-an-ip-address/
