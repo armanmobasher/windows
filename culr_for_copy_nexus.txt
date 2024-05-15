@@ -1,0 +1,6 @@
+Curl Repo Copy Files
+
+curl -v -u user:pass --upload-file <path> <url>
+
+  example:
+curl -v -u aamini:pass --upload-file c:/Zabbix.zip https://repo.sadad.co.ir/repository/windows-raw-repo/ZabbixForFTP/Zabbix.zip
